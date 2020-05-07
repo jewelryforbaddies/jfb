@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="icon" href="favicon.png" type="png" sizes="32x32">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.png" type="png" sizes="32x32">
+<title>Popular Designs | Winter Collection</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+
+h1 {
+font-family: 'Oswald', sans-serif;
+font-size: 30px;
+margin-top: 15%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  margin: 5%;
+  letter-spacing: 3px;
+
+}
+
+.footer {
+ max-width: 100%;
+}
+
+
+
+/*=================Menu/SideNav CSS====================*/
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #dbc8c8;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #fac5d7;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 12px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/*=================Banner/Header CSS====================*/
+
+
+.banner {
+	width: 40%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; 
+    top: -50px;
+}
+
+/*=================Flip Card CSS====================*/
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin-left: 5%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #895a69;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 20px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+}
+
+</style>
+</head>
+<body style="background-color:#fff5f5;">
+<div id="main">
+
+
+<div id="mySidebar" class="sidebar">
+ <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> 
+ <a class="active" href="template 2.html"">Home </a>
+ <a href="#news">Capital</a>
+ <a href="#order">Location</a>
+ <a href="#contact">Personnel</a>
+ <a href="#about">Equipment</a>
+ <a href="#about">Inventory</a>
+ <a href="#about">Projections</a>
+ <a href="about.html">About</a>
+ <a href="contactus.html">Contact</a>
+</div>
+
+<button class="openbtn" onclick="openNav()">☰</button>
+<a class="active" href="template 2.html""><img class="banner" src="banner.png"></a>
+
+
+
+<center>
+<div class="row">
+<div class="column">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="outofstock.png" alt="gold infinity necklace">
+    </div>
+    <div class="flip-card-back">
+      <h1>Gold Infinity Necklace</h1> 
+      <p>Dainty gold chain necklace with infinity pendant</p> 
+      <p>$20</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="outofstock.png" alt="gold infinity necklace">
+    </div>
+    <div class="flip-card-back">
+      <h1>Silver Initial Ring</h1> 
+      <p>Classic silver ring with custom engraved initials</p> 
+      <p>$45</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="outofstock.png" alt="gold infinity necklace">
+    </div>
+    <div class="flip-card-back">
+      <h1>Rose Gold Pendant</h1> 
+      <p>Intricate gold pedant with pin attachment</p> 
+      <p>$25</p>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+<br></br>
+<br></br>
+
+
+<div class="row">
+<div class="column">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="outofstock.png" alt="gold infinity necklace">
+    </div>
+    <div class="flip-card-back">
+      <h1>Snowflake Charm</h1> 
+      <p>Simple snowflake charm for the winter season</p> 
+      <p>$15</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="outofstock.png" alt="gold infinity necklace">
+    </div>
+    <div class="flip-card-back">
+      <h1>Gold Band</h1> 
+      <p>One of our most classic designs, a beautiful gold bracelet to go with any look</p> 
+      <p>$30</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="outofstock.png" alt="gold infinity necklace">
+    </div>
+    <div class="flip-card-back">
+      <h1>Silver Hoops</h1> 
+      <p>Classy silver hoops to make you the ULTIMATE BADDIE</p> 
+      <p>$25</p>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+</center>
+
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+	});
+
+</script>
+
+<br></br>
+<br></br>
+
+
+
+<footer>
+<img class="footer" src="footer.png">
+</footer>
+
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Shipping Update</h4>
+            </div>
+            <div class="modal-body">
+				<p>Hey baddies! The health and safety of our customers is of utmost
+				importance to us, therefore due to the COVID-19 outbreak we've decided 
+				to stop taking orders until May 2nd. Our stores will also be closed 
+				until this time. Our staff is staying safe and practicing social distancing 
+				during quarantine as we encourage you to do the same.
+			 	Thanks for understanding!</p>
+            </div>
+            <div class="modal-footer">
+            <p>~Our Team at Jewelry for Baddies</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
