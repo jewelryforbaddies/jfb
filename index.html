@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="icon" href="favicon.png" type="png" sizes="32x32">
+<title>Jewelry for Baddies</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Oswald', sans-serif
+
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  margin: 5%;
+  letter-spacing: 3px;
+
+}
+
+.info {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  margin: 5%;
+  margin-top: 2px;
+  letter-spacing: 3px;
+
+}
+
+h1 {
+font-family: 'Oswald', sans-serif
+font-size: 30px;
+text-align: center;
+
+}
+
+.footer {
+ max-width: 100%;
+}
+
+
+/*=================Menu/SideNav CSS====================*/
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #dbc8c8;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #fac5d7;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 12px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/*=================Homepage Image CSS====================*/
+
+
+.homeimg {
+	margin: 0.6% 7.5%;
+	max-width: 85%;
+	overflow-x: hidden;
+	z-index: 0;
+	display: block;
+	border-radius: 1%;
+	
+}
+
+  
+/*=================Modal CSS====================*/
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {bottom:-300px; opacity:0} 
+  to {bottom:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {bottom:-300px; opacity:0}
+  to {bottom:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#myBtn {
+  background-color: #ffefef;
+  border: none;
+  color: black;
+  padding: 20px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 6px;
+  opacity: 0.85;
+  width: 40%;
+  height: 11%;
+
+}
+
+#myBtn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.container {
+  position: relative;
+}
+
+.container .checkitout {
+  position: absolute;
+  top: 85%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+ 
+}
+
+/*=================Panel CSS====================*/
+
+.custom {
+	background-color: #273018;
+    color: #ffefef;
+    opacity: 0.9;
+}
+
+.custom span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.custom span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.custom:hover span {
+  padding-right: 25px;
+}
+
+.custom:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.banner {
+	width: 40%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; 
+    top: -50px;
+}
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+/*=================Shop By... Images CSS====================*/
+
+.shop {
+
+max-width: 33%;
+padding: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body style="background-color:#fff5f5;">
+<div id="main">
+
+<div id="mySidebar" class="sidebar">
+ <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> 
+ <a class="active" href="template 2.html"">Home </a>
+ <a href="#news">Capital</a>
+ <a href="elements.html#location">Location</a>
+ <a href="elements.html#personnel">Personnel</a>
+ <a href="elements.html#equipment">Equipment</a>
+ <a href="elements.html#inventory">Inventory</a>
+ <a href="elements.html#profit">Projections</a>
+ <a href="about.html">About</a>
+ <a href="contactus.html">Contact</a>
+</div>
+
+
+
+<button class="openbtn" onclick="openNav()">☰</button>
+<a class="active" href="template 2.html""><img class="banner" src="banner.png"></a>
+
+
+<div class="container">
+	<img align="middle"class="homeimg" src="1.png">
+	<button id="myBtn" class="checkitout"style="font-size:1.2vw;">SHOP THE COLLECTION</button>
+</div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <font face='Playfair Display' <p>Hey there! Unfortunately we don't have a real collection
+    this spring because we aren't a real business, but thanks for checking us out!</p></font>
+  </div>
+
+</div>
+
+<br></br>
+
+<h1 style="font-family:Oswald;">Who we are</h1>
+<p class="info">Welcome to jewelry for baddies! We’re a jewelry brand based in Los Angeles.
+Jewelry for baddies has designs for any occasion whether 
+it’s valentines day, a birthday, mothers day, or just to celebrate the baddies in your life.
+Jewelry for baddies was founded in 2020 by Anya, Hyma, 
+and Saachi for a Business and Criminal Law project. Check out some of our 
+most popular designs below, or go to our about page to learn more about us.
+Thanks for shopping ✌️ 
+</p>
+
+<br></br>
+
+<div class="w3-panel custom w3-card-4">
+	<a href="populardesigns.html"><p><span>Check out some of our most popular designs this past winter</span></p><a>
+</div>
+
+<br></br>
+
+<div class="row">
+
+<div class="column">
+<img class="shop" align="left" src="shopbycolor.png">
+</div>
+
+<div class="column">
+<img class="shop" align="left" src="shopbystyle.png">
+</div>
+
+<div class="column">
+<img class="shop" align="left" src="shopbydes.png">
+</div>
+
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+<footer>
+<img class="footer" src="footer.png">
+</footer>
+
+</div>
+</body>
+</html>
